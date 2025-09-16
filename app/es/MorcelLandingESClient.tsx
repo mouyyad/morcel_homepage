@@ -519,6 +519,9 @@ export default function MorcelLandingESClient() {
 
           <Card className="max-w-md mx-auto bg-white border-2 border-purple-200 shadow-lg">
             <div className="p-8 text-center">
+              <div className={`${chivo.className} text-lg font-semibold text-purple-600 mb-3`}>
+                ¡Comienza con una prueba gratuita de 7 días!
+              </div>
               <Badge className={`${chivo.className} bg-orange-100 text-orange-600 mb-4`}>{t.launchPrice}</Badge>
 
               <div className="mb-6">
