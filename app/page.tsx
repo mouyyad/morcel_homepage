@@ -554,7 +554,7 @@ const translations = {
       "Ändern Sie Ihren Feed in Sekunden. Null Druck. Erstellen Sie viral-würdigen Gastronomie-Inhalt, der sich selbst verkauft.",
     builtToGoViral: "Gebaut Um Viral Zu Werden.",
     builtToGoViralDesc:
-      "Jedes Gericht ist Instagram-bereit. Verwandeln Sie jede Mahlzeit in nutzergenerierte Inhalte, die sich selbst vermarkten.",
+      "Jedes Gericht ist Instagram-ready. Verwandeln Sie jede Mahlzeit in nutzergenerierte Inhalte, die sich selbst vermarkten.",
     trustedWorldwideTitle: "Weltweit Vertraut",
     trustedWorldwideSubtitle:
       "Schließen Sie sich Tausenden von Restaurants und Millionen von Gästen an, die bereits ihr Gastronomie-Erlebnis transformiert haben.",
@@ -698,17 +698,26 @@ export default function MorcelLanding() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="center" className="w-48">
                 <DropdownMenuItem asChild>
-                  <Link href="https://dev.morcel.ai/menu/49/instagram" className={`${chivo.className} cursor-pointer`}>
+                  <Link
+                    href="https://dev.morcel.ai/menu/easZSZ?theme=instagram"
+                    className={`${chivo.className} cursor-pointer`}
+                  >
                     Instagram
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="https://dev.morcel.ai/menu/49/tiktok" className={`${chivo.className} cursor-pointer`}>
+                  <Link
+                    href="https://dev.morcel.ai/menu/easZSZ?theme=tiktok"
+                    className={`${chivo.className} cursor-pointer`}
+                  >
                     TikTok
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="https://dev.morcel.ai/menu/49/tinder" className={`${chivo.className} cursor-pointer`}>
+                  <Link
+                    href="https://dev.morcel.ai/menu/easZSZ?theme=tinder"
+                    className={`${chivo.className} cursor-pointer`}
+                  >
                     Tinder
                   </Link>
                 </DropdownMenuItem>
@@ -1048,17 +1057,26 @@ export default function MorcelLanding() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="center" className="w-48">
                 <DropdownMenuItem asChild>
-                  <Link href="https://dev.morcel.ai/menu/49/instagram" className={`${chivo.className} cursor-pointer`}>
+                  <Link
+                    href="https://dev.morcel.ai/menu/easZSZ?theme=instagram"
+                    className={`${chivo.className} cursor-pointer`}
+                  >
                     Instagram
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="https://dev.morcel.ai/menu/49/tiktok" className={`${chivo.className} cursor-pointer`}>
+                  <Link
+                    href="https://dev.morcel.ai/menu/easZSZ?theme=tiktok"
+                    className={`${chivo.className} cursor-pointer`}
+                  >
                     TikTok
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="https://dev.morcel.ai/menu/49/tinder" className={`${chivo.className} cursor-pointer`}>
+                  <Link
+                    href="https://dev.morcel.ai/menu/easZSZ?theme=tinder"
+                    className={`${chivo.className} cursor-pointer`}
+                  >
                     Tinder
                   </Link>
                 </DropdownMenuItem>

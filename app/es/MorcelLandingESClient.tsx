@@ -8,9 +8,8 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { CheckCircle, Star, Users, Plus, Grid3X3, Edit3, TrendingUp, Globe, ChevronDown } from "lucide-react"
-import { Inter, Dela_Gothic_One, Chivo } from "next/font/google"
+import { Dela_Gothic_One, Chivo } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] })
 const delaGothicOne = Dela_Gothic_One({ weight: "400", subsets: ["latin"] })
 const chivo = Chivo({ subsets: ["latin"] })
 
@@ -27,7 +26,6 @@ const translations = {
     "¿Por qué mostrar PDFs aburridos cuando los clientes quieren navegación estilo Instagram y pedidos fáciles, contenido sin esfuerzo que impulsa las ventas?",
   buildYourMenu: "Construye tu menú",
   seeLiveMenu: "Ver Menú en Vivo",
-  seeLiveDemo: "Ver Demo en Vivo",
   qrMenusTitle: "Menús QR, Reinventados",
   qrMenusSubtitle:
     "Morcel convierte los menús QR obsoletos en experiencias interactivas y móviles que encantarán a tus huéspedes. Sin PDFs. Sin pellizcar para hacer zoom. Solo menús deslizables y escaneables estilo redes sociales, con 3 plantillas elegantes y soporte multiidioma.",
@@ -104,7 +102,7 @@ const translations = {
   product: "Producto",
   features: "Características",
   resources: "Recursos",
-  allRightsReserved: "© 2024 Morcel. Todos los derechos reservados.",
+  allRightsReserved: "© 2025 Morcel. Todos los derechos reservados.",
   privacy: "Privacidad",
   terms: "Términos",
   cookies: "Cookies",
@@ -127,17 +125,14 @@ export default function MorcelLandingESClient() {
     if (langCode === "en") {
       window.location.href = "/"
     } else if (langCode === "es") {
-      // Already on Spanish page
       return
     } else {
-      // For other languages, redirect to main page and set language
       window.location.href = `/?lang=${langCode}`
     }
   }
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
       <header className="border-b border-gray-100 px-4 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center">
@@ -199,7 +194,6 @@ export default function MorcelLandingESClient() {
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="px-4 py-16 md:py-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
@@ -235,7 +229,7 @@ export default function MorcelLandingESClient() {
                     <DropdownMenuContent align="center" className="w-48">
                       <DropdownMenuItem asChild>
                         <Link
-                          href="https://dev.morcel.ai/menu/49/instagram"
+                          href="https://dev.morcel.ai/menu/easZSZ?theme=instagram"
                           className={`${chivo.className} cursor-pointer`}
                         >
                           Instagram
@@ -243,7 +237,7 @@ export default function MorcelLandingESClient() {
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
                         <Link
-                          href="https://dev.morcel.ai/menu/49/tiktok"
+                          href="https://dev.morcel.ai/menu/easZSZ?theme=tiktok"
                           className={`${chivo.className} cursor-pointer`}
                         >
                           TikTok
@@ -251,7 +245,7 @@ export default function MorcelLandingESClient() {
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
                         <Link
-                          href="https://dev.morcel.ai/menu/49/tinder"
+                          href="https://dev.morcel.ai/menu/easZSZ?theme=tinder"
                           className={`${chivo.className} cursor-pointer`}
                         >
                           Tinder
@@ -266,7 +260,6 @@ export default function MorcelLandingESClient() {
         </div>
       </section>
 
-      {/* QR Menus, Reinvented */}
       <section id="qr-menus" className="px-4 py-16 bg-gradient-to-b from-purple-50 to-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className={`${delaGothicOne.className} text-3xl md:text-5xl text-gray-900 mb-6`}>{t.qrMenusTitle}</h2>
@@ -302,7 +295,6 @@ export default function MorcelLandingESClient() {
         </div>
       </section>
 
-      {/* How Morcel Works */}
       <section className="px-4 py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className={`${delaGothicOne.className} text-3xl md:text-4xl text-gray-900 mb-4`}>
@@ -347,14 +339,12 @@ export default function MorcelLandingESClient() {
         </div>
       </section>
 
-      {/* Turn Your Menu Into a Social Media Feed */}
       <section className="px-4 py-16">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <h2 className={`${delaGothicOne.className} text-3xl md:text-4xl text-gray-900 mb-4`}>{t.socialFeedTitle}</h2>
           <p className={`${chivo.className} text-xl text-gray-600 max-w-3xl mx-auto`}>{t.socialFeedSubtitle}</p>
         </div>
 
-        {/* Visual Food Discovery */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
             <h3 className={`${delaGothicOne.className} text-4xl md:text-5xl text-gray-900 mb-4`}>
@@ -382,7 +372,7 @@ export default function MorcelLandingESClient() {
           <div className="relative flex justify-center">
             <Image
               src="/images/mobile-food-app-new.png"
-              alt="Interfaz de aplicación móvil de comida mostrando descubrimiento de comida estilo Instagram con Classic Bakery presentando Croissant de Almendra"
+              alt="Interfaz de aplicación móvil de comida"
               width={400}
               height={600}
               className="max-w-full h-auto"
@@ -390,7 +380,6 @@ export default function MorcelLandingESClient() {
           </div>
         </div>
 
-        {/* Viral Menu Experience */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-2">
             <h3 className={`${delaGothicOne.className} text-4xl md:text-5xl text-gray-900 mb-4`}>{t.viralMenuTitle}</h3>
@@ -416,7 +405,7 @@ export default function MorcelLandingESClient() {
           <div className="relative order-1 lg:order-1 flex justify-center">
             <Image
               src="/images/coffee-menu-app.png"
-              alt="Aplicación de menú de café mostrando cappuccino con arte latte de corazón y características de compartir social"
+              alt="Aplicación de menú de café"
               width={300}
               height={600}
               className="max-w-full h-auto"
@@ -425,7 +414,6 @@ export default function MorcelLandingESClient() {
         </div>
       </section>
 
-      {/* Everything you need for viral dining */}
       <section className="px-4 py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <Badge className={`${chivo.className} bg-orange-100 text-orange-600 mb-4`}>{t.socialMenuFeatures}</Badge>
@@ -461,7 +449,6 @@ export default function MorcelLandingESClient() {
         </div>
       </section>
 
-      {/* Trusted Worldwide */}
       <section className="px-4 py-16">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className={`${delaGothicOne.className} text-3xl md:text-4xl text-gray-900 mb-4`}>
@@ -490,7 +477,6 @@ export default function MorcelLandingESClient() {
             </div>
           </div>
 
-          {/* Testimonial */}
           <Card className="max-w-4xl mx-auto p-8">
             <div className="flex items-center justify-center mb-4">
               {[...Array(5)].map((_, i) => (
@@ -511,7 +497,6 @@ export default function MorcelLandingESClient() {
         </div>
       </section>
 
-      {/* Pricing Section */}
       <section id="pricing" className="px-4 py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className={`${delaGothicOne.className} text-3xl md:text-4xl text-gray-900 mb-4`}>{t.pricingTitle}</h2>
@@ -570,7 +555,6 @@ export default function MorcelLandingESClient() {
         </div>
       </section>
 
-      {/* Final CTA */}
       <section className="px-4 py-16 bg-gradient-to-r from-purple-600 to-orange-500">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className={`${delaGothicOne.className} text-3xl md:text-4xl mb-4`}>{t.finalCtaTitle}</h2>
@@ -597,7 +581,6 @@ export default function MorcelLandingESClient() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white px-4 py-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
